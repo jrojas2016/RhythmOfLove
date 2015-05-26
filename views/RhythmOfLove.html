@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Rhythm Of Love</title>
+</head>
+<style>
+.box {
+	height: 300px;
+	width: 300px;
+	float: left;
+	text-align: center;
+	margin: 10px;
+}
+.separator {
+	height: 250px;
+	width: 300px;
+	float: left;
+	text-align: center;
+}
+.separator2 {
+	height: 50px;
+	width: 300px;
+	float: left;
+	text-align: center;
+}
+span {
+	color: white;
+	font-size: 30px;
+	font-family: 'Arial', 'sans'
+}
+</style>
+<body>
+	<div style = "overflow: hidden; width: 400px">
+		<a href = "https://api.spark.io/v1/devices/core_id/rgb?access_token=cabe55aa6ef427154509291685ac3d93bf9e7bbb&args=tay">
+			<div class = 'box' style = "background-color: blue">
+				<span>Thinking About You</span>
+			</div>
+		</a>
+
+		<a href = "https://api.spark.io/v1/devices/core_id/rgb?access_token=cabe55aa6ef427154509291685ac3d93bf9e7bbb&args=ily">
+			<div class = 'box' style = "background-color: red">
+				<span>I Love You</span>
+			</div>
+		</a>
+		<div class = 'box' style = "background-color: magenta">
+			<a id="shb" href="https://api.spark.io/v1/devices/core_id/rgb?access_token=cabe55aa6ef427154509291685ac3d93bf9e7bbb&args=shb">
+				<div class = 'separator' style = "background-color: magenta" id="divID">
+					<span>Share Heart-Beat</span>
+				</div>
+			</a>
+			<div class = 'separator2' style = "background-color: magenta">
+				BPM:<br><input type="text" id="bpm">
+				<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+				<script>
+				$(function() {
+    				$('#divID').click( function() {
+        				window.location = $('#shb').attr('href') + ',' + $('#bpm').val();
+        				return false;
+    				});
+				});
+				</script>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
