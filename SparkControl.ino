@@ -7,7 +7,7 @@
 //Name of the pins controlling 3 colors on the LED
 int red_led = D0;
 int blue_led = D2;
-int green_led = D4;
+int green_led = D4; 
 
 void setup() {
     
@@ -87,29 +87,39 @@ int rgbControl(String command) {
     if (command.substring(0,3) == "shb") {
         /*
         shb = Share Heart Beat; bpm = beats per minute
-        Function emulates a heart-beat
+        Function emulates a heart-beat with magenta color
         based on the bpm variable. 
         */
         int bpm = command.substring(4).toInt();
         bpm = 1000*(60/bpm); //Convert beats per minute to miliseconds per beat
+        digitalWrite(red_led, LOW);
         digitalWrite(blue_led, LOW);
         delay(bpm/3);
+        digitalWrite(red_led, HIGH);
         digitalWrite(blue_led, HIGH);
         delay(bpm);
+        digitalWrite(red_led, LOW);
         digitalWrite(blue_led, LOW);
         delay(bpm/3);
+        digitalWrite(red_led, HIGH);
         digitalWrite(blue_led, HIGH);
         delay(bpm);
+        digitalWrite(red_led, LOW);
         digitalWrite(blue_led, LOW);
         delay(bpm/3);
+        digitalWrite(red_led, HIGH);
         digitalWrite(blue_led, HIGH);
         delay(bpm);
+        digitalWrite(red_led, LOW);
         digitalWrite(blue_led, LOW);
         delay(bpm/3);
+        digitalWrite(red_led, HIGH);
         digitalWrite(blue_led, HIGH);
         delay(bpm);
+        digitalWrite(red_led, LOW);
         digitalWrite(blue_led, LOW);
         delay(bpm/3);
+        digitalWrite(red_led, HIGH);
         digitalWrite(blue_led, HIGH);
     }
 }
