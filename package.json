@@ -1,20 +1,25 @@
 {
   "name": "rhythm_of_love",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "rol_app.js",
+  "engines": {
+    "node": "0.10.x"
+    "npm": "2.1.x"
+  },
+  "dependencies": {
+    "express": "^4.12.4",
+    "ejs": "^2.3.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "BSD-2-Clause",
-  "dependencies": {
-    "express": "^4.12.4"
-  },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jrojas2016/RhythmOfLove.git"
   },
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/jrojas2016/RhythmOfLove/issues"
   },
