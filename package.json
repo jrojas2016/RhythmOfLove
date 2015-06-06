@@ -2,10 +2,6 @@
   "name": "rhythm_of_love",
   "version": "1.0.0",
   "main": "rol_app.js",
-  "engines": {
-    "node": "0.10.x"
-    "npm": "2.1.x"
-  },
   "dependencies": {
     "express": "^4.12.4",
     "ejs": "^2.3.1"
